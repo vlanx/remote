@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
-ln -sf "$PWD/.tmux.conf" "$HOME/.tmux.conf"
-ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
+cp "$PWD/.bashrc" "$HOME/.bashrc"
+cp "$PWD/.tmux.conf" "$HOME/.tmux.conf"
+cp "$PWD/.vimrc" "$HOME/.vimrc"
