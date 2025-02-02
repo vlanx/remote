@@ -64,7 +64,6 @@ nnoremap <C-u> <C-u>zz
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-
 " Gruvbox material config
 "let g:gruvbox_material_better_performance = 1
 "let g:gruvbox_material_background = 'hard'
