@@ -39,7 +39,6 @@ Plug 'tpope/vim-vinegar' " File explorer inside VIM (netrw but better)
 Plug 'tpope/vim-commentary' " Comment line(s) with `gc` or `gcc`
 Plug 'machakann/vim-highlightedyank' " Highlight yanked selection
 Plug 'sainnhe/gruvbox-material' " Vim Theme
-Plug 'rose-pine/vim' " Vim Theme
 call plug#end()
 
 " vim-move config
@@ -67,16 +66,14 @@ let &t_EI = "\e[2 q"
 " Gruvbox material config
 "let g:gruvbox_material_better_performance = 1
 "let g:gruvbox_material_background = 'hard'
-"colorscheme gruvbox-material
-colorscheme rosepine_moon
+colorscheme default
 set background=dark
 " Lightline configuration
 let g:lightline = {
-      "\ 'colorscheme': 'gruvbox_material',
-      \ 'colorscheme': 'rosepine',
+      \ 'colorscheme': 'defualt',
       \ }
 
 " Reset cursor style when leaving Vim
 autocmd VimLeave * set guicursor=a:hor20
 
-set termguicolors
+"set termguicolors
