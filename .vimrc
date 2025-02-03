@@ -17,7 +17,8 @@ set relativenumber
 set laststatus=2
 set noshowmode
 set t_Co=256
-set noignorecase
+set ignorecase
+set smartcase
 set scrolloff=15
 set clipboard=unnamed
 set wildmenu
@@ -70,7 +71,7 @@ colorscheme default
 set background=dark
 " Lightline configuration
 let g:lightline = {
-      \ 'colorscheme': 'defualt',
+      \ 'colorscheme': 'nord',
       \ }
 
 " Reset cursor style when leaving Vim
