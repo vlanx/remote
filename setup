@@ -4,3 +4,4 @@ set -e
 cp "$PWD/.bashrc" "$HOME/.bashrc"
 cp "$PWD/.tmux.conf" "$HOME/.tmux.conf"
 cp "$PWD/.vimrc" "$HOME/.vimrc"
+cp "$PWD/.inputrc" "$HOME/.inputrc"
