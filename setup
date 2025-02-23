@@ -6,5 +6,5 @@ ln -sf "$PWD/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$PWD/.inputrc" "$HOME/.inputrc"
 mkdir -p "$HOME/.vim/"
 ln -sf "$PWD/vim/autoload/" "$HOME/.vim/autoload"
-ln -sf "$PWD/vim/plugged/" "$HOME/.vim/plugged"
 ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
+vim +'source ~/.vimrc' +PlugInstall +qall
