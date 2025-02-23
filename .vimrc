@@ -81,12 +81,12 @@ xmap T <Plug>Sneak_T
 nmap <bSlash> <Plug>SneakLabel_s
 nmap <bar> <Plug>SneakLabel_S
 
-" Colorscheme
-set background=dark
-
 "let g:gruvbox_material_background = 'hard'
 "colorscheme gruvbox-material
-colorscheme rosepine_moon
+colorscheme default
+
+" Colorscheme
+set background=dark
 
 " Lightline configuration
 let g:lightline = {
