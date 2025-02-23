@@ -82,8 +82,8 @@ nmap <bSlash> <Plug>SneakLabel_s
 nmap <bar> <Plug>SneakLabel_S
 
 "let g:gruvbox_material_background = 'hard'
-"colorscheme gruvbox-material
-colorscheme rosepine_moon
+"silent! colorscheme gruvbox-material
+silent! colorscheme rosepine_moon
 
 " Colorscheme
 set background=dark
