@@ -17,8 +17,7 @@ set relativenumber
 set laststatus=2
 set noshowmode
 set t_Co=256
-set ignorecase
-set smartcase
+set noignorecase
 set scrolloff=15
 set clipboard=unnamed
 set wildmenu
@@ -39,7 +38,9 @@ Plug 'itchyny/lightline.vim' " Vim status line theme
 Plug 'tpope/vim-vinegar' " File explorer inside VIM (netrw but better)
 Plug 'tpope/vim-commentary' " Comment line(s) with `gc` or `gcc`
 Plug 'machakann/vim-highlightedyank' " Highlight yanked selection
+Plug 'justinmk/vim-sneak' " Jump to the 2chars searched 
 Plug 'sainnhe/gruvbox-material' " Vim Theme
+Plug 'rose-pine/vim' " Vim Theme
 call plug#end()
 
 " vim-move config
@@ -64,17 +65,33 @@ nnoremap <C-u> <C-u>zz
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Gruvbox material config
-"let g:gruvbox_material_better_performance = 1
-"let g:gruvbox_material_background = 'hard'
-colorscheme default
+" vim-sneak keybinds
+nmap + <Plug>Sneak_s
+xmap + <Plug>Sneak_s
+
+map f <Plug>Sneak_f
+xmap f <Plug>Sneak_f
+map F <Plug>Sneak_F
+xmap F <Plug>Sneak_F
+map t <Plug>Sneak_t
+xmap t <Plug>Sneak_t
+map T <Plug>Sneak_T
+xmap T <Plug>Sneak_T
+
+nmap <bSlash> <Plug>SneakLabel_s
+nmap <bar> <Plug>SneakLabel_S
+
+" Colorscheme
 set background=dark
+
+"let g:gruvbox_material_background = 'hard'
+"colorscheme gruvbox-material
+colorscheme rosepine_moon
+
 " Lightline configuration
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      "\ 'colorscheme': 'gruvbox_material',
+      \ 'colorscheme': 'rosepine',
       \ }
 
-" Reset cursor style when leaving Vim
-autocmd VimLeave * set guicursor=a:hor20
-
-"set termguicolors
+set termguicolors

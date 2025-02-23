@@ -1,7 +1,10 @@
 #!/bin/sh
 set -e
 
-cp "$PWD/.bashrc" "$HOME/.bashrc"
-cp "$PWD/.tmux.conf" "$HOME/.tmux.conf"
-cp "$PWD/.vimrc" "$HOME/.vimrc"
-cp "$PWD/.inputrc" "$HOME/.inputrc"
+ln "$PWD/.bashrc" "$HOME/.bashrc"
+ln "$PWD/.tmux.conf" "$HOME/.tmux.conf"
+ln "$PWD/.inputrc" "$HOME/.inputrc"
+mkdir -p "$HOME/.vim/"
+ln -sf "$PWD/vim/autoload/" "$HOME/.vim/autoload"
+ln -sf "$PWD/vim/plugged/" "$HOME/.vim/plugged"
+ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
