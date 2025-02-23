@@ -13,7 +13,6 @@ set undodir=~/.config/vim/undodir
 set undofile
 set incsearch
 set hlsearch
-set relativenumber
 set laststatus=2
 set noshowmode
 set t_Co=256
