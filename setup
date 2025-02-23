@@ -8,3 +8,4 @@ mkdir -p "$HOME/.vim/"
 ln -sf "$PWD/vim/autoload/" "$HOME/.vim/autoload"
 ln -sf "$PWD/vim/plugged/" "$HOME/.vim/plugged"
 ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
+(cd "$HOME/.vim/plugged/" && git submodule update --init)
