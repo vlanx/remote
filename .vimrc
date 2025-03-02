@@ -90,7 +90,7 @@ set background=dark
 " Lightline configuration
 let g:lightline = {
       "\ 'colorscheme': 'gruvbox_material',
-      \ 'colorscheme': 'rosepine',
+      \ 'colorscheme': 'rosepine_custom',
       \ }
 
 set termguicolors
