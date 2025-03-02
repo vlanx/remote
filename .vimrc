@@ -5,7 +5,7 @@ set shiftwidth=4
 set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
-set number
+set nonumber
 set nowrap
 set noswapfile
 set nobackup
