@@ -25,7 +25,7 @@ if &background ==# 'dark'
     let s:p.inactive.right  = [ [ s:overlay, s:surface ], [ s:overlay, s:surface ] ]
 
     let s:p.insert.left     = [ [ s:pine, s:base, 'bold' ], [ s:text, s:base ] ]
-    let s:p.insert.right    = [ [ s:pine, s:base ], [ s:text, s:surface ] ]
+    let s:p.insert.right    = [ [ s:pine, s:base ], [ s:text, s:base ] ]
     let s:p.insert.middle   = [ [ s:text, s:base ] ]
 
     let s:p.replace.left    = [ [ s:love, s:base, 'bold' ], [ s:text, s:base ] ]
