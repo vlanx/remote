@@ -22,13 +22,6 @@ set clipboard=unnamed
 set wildmenu
 set wildmode=longest:full,full
 
-" Automatically download Vim Plugg
-"let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-"if empty(glob(data_dir . '/autoload/plug.vim'))
-"  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-"endif
-
 " Plugins Installed
 call plug#begin('~/.vim/plugged')
 Plug 'matze/vim-move' " Move line(s) with Ctrl + h/j/k/l
@@ -61,6 +54,8 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
 " Change cursor to line or block depending on insert or normal mode
+" Enter vim with no cursor style
+autocmd VimEnter * normal :
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
@@ -89,6 +84,7 @@ set background=dark
 
 " Lightline configuration
 let g:lightline = {
+	"My own implementation of lightline
       "\ 'colorscheme': 'gruvbox_material',
       \ 'colorscheme': 'rosepine_custom',
       \ }
