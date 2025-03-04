@@ -16,7 +16,8 @@ set hlsearch
 set laststatus=2
 set noshowmode
 set t_Co=256
-set noignorecase
+set ignorecase
+set smartcase
 set scrolloff=15
 set clipboard=unnamed
 set wildmenu
@@ -60,6 +61,7 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " vim-sneak keybinds
+let g:sneak#use_ic_scs = 1
 nmap + <Plug>Sneak_s
 xmap + <Plug>Sneak_s
 
@@ -75,11 +77,12 @@ xmap T <Plug>Sneak_T
 nmap <bSlash> <Plug>SneakLabel_s
 nmap <bar> <Plug>SneakLabel_S
 
+
+" Colorscheme
+"
 "let g:gruvbox_material_background = 'hard'
 "silent! colorscheme gruvbox-material
 silent! colorscheme rosepine_moon
-
-" Colorscheme
 set background=dark
 
 " Lightline configuration
