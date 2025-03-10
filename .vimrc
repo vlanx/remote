@@ -82,12 +82,12 @@ nmap <bar> <Plug>SneakLabel_S
 "
 "let g:gruvbox_material_background = 'hard'
 "silent! colorscheme gruvbox-material
-silent! colorscheme rosepine_moon
+silent! colorscheme rosepine_dawn
 set background=dark
 
 " Lightline configuration
+"My own implementation of lightline
 let g:lightline = {
-	"My own implementation of lightline
       "\ 'colorscheme': 'gruvbox_material',
       \ 'colorscheme': 'rosepine_custom',
       \ }
