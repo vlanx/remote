@@ -80,16 +80,13 @@ nmap <bar> <Plug>SneakLabel_S
 
 " Colorscheme
 "
-"let g:gruvbox_material_background = 'hard'
-"silent! colorscheme gruvbox-material
-silent! colorscheme rosepine_dawn
-set background=dark
+let g:gruvbox_material_background = 'soft'
+silent! colorscheme gruvbox-material
+"silent! colorscheme rosepine_dawn
 
 " Lightline configuration
 "My own implementation of lightline
-let g:lightline = {
-      "\ 'colorscheme': 'gruvbox_material',
-      \ 'colorscheme': 'rosepine_custom',
-      \ }
+let g:lightline = {'colorscheme': 'gruvbox_material_custom'}
+ "let g:lightline = {'colorscheme': 'rosepine_custom'}
 
 set termguicolors
