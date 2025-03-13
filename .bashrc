@@ -122,6 +122,8 @@ alias tree='tree -a'
 alias df='df -h'
 alias diff="diff --color"
 alias gitl="git log -n 5 --graph --oneline"
+alias sr="source venv/bin/activate"
+alias sh="history | grep "
 
 export KUBECONFIG=~/.kube/config
 export VISUAL=vim
