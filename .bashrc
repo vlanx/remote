@@ -124,6 +124,7 @@ alias diff="diff --color"
 alias gitl="git log -n 5 --graph --oneline"
 alias sr="source venv/bin/activate"
 alias sh="history | grep "
+alias "rr"="sudo !!" #rerun last command as sudo
 
 export KUBECONFIG=~/.kube/config
 export VISUAL=vim
