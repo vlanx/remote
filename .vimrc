@@ -62,8 +62,12 @@ let &t_EI = "\e[2 q"
 
 " vim-sneak keybinds
 let g:sneak#use_ic_scs = 1
-nmap + <Plug>Sneak_s
-xmap + <Plug>Sneak_s
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+nmap <bslash> <Plug>Sneak_s
+xmap <bslash> <Plug>Sneak_s
+nmap <bar> <Plug>Sneak_S
+xmap <bar> <Plug>Sneak_S
 
 map f <Plug>Sneak_f
 xmap f <Plug>Sneak_f
@@ -73,9 +77,6 @@ map t <Plug>Sneak_t
 xmap t <Plug>Sneak_t
 map T <Plug>Sneak_T
 xmap T <Plug>Sneak_T
-
-nmap <bSlash> <Plug>SneakLabel_s
-nmap <bar> <Plug>SneakLabel_S
 
 
 " Colorscheme
