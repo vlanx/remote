@@ -62,8 +62,6 @@ if ! shopt -oq posix; then
         fi
 fi
 
-PROMPT_LONG=30
-PROMPT_MAX=95
 PROMPT_AT=@
 
 detect_venv() {
@@ -95,16 +93,8 @@ __ps1() {
 
         detect_venv # Check if we are in a python virtual env
 
-        if ((${#countme} > PROMPT_MAX)); then
-                # Doube line prompt
-                PS1="$e╔ $\uu$g$PROMPT_AT$h\h$e:$w$\w\n$e║ $B \n$e╚$e$pv$p$P$x "
-        elif ((${#countme} > PROMPT_LONG)); then
-                # Text on next line (long)
-                PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv\n$P$x "
-        else
-                # Text on same line (short)
-                PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv$p$P$x "
-        fi
+        # Text on next line (long)
+        PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv\n$p$P$x "
 }
 
 PROMPT_COMMAND="__ps1"

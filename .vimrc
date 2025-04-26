@@ -81,9 +81,9 @@ xmap T <Plug>Sneak_T
 
 " Colorscheme
 "
-let g:gruvbox_material_background = 'soft'
-silent! colorscheme gruvbox-material
-"silent! colorscheme rosepine_dawn
+"let g:gruvbox_material_background = 'soft'
+"silent! colorscheme gruvbox-material
+silent! colorscheme rosepine_dawn
 
 " Lightline configuration
 "My own implementation of lightline
