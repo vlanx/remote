@@ -83,11 +83,11 @@ xmap T <Plug>Sneak_T
 "
 "let g:gruvbox_material_background = 'soft'
 "silent! colorscheme gruvbox-material
-silent! colorscheme rosepine_dawn
+silent! colorscheme rosepine
 
 " Lightline configuration
 "My own implementation of lightline
-let g:lightline = {'colorscheme': 'gruvbox_material_custom'}
- "let g:lightline = {'colorscheme': 'rosepine_custom'}
+"let g:lightline = {'colorscheme': 'gruvbox_material_custom'}
+let g:lightline = {'colorscheme': 'rosepine_custom'}
 
 set termguicolors
