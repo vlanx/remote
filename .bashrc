@@ -32,14 +32,14 @@ shopt -s checkwinsize
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-        alias ls='ls --color=auto'
-        alias dir='dir --color=auto'
-        #alias vdir='vdir --color=auto'
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto'
+	alias dir='dir --color=auto'
+	#alias vdir='vdir --color=auto'
 
-        alias grep='grep --color=auto'
-        alias fgrep='fgrep --color=auto'
-        alias egrep='egrep --color=auto'
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -55,46 +55,46 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-        if [ -f /usr/share/bash-completion/bash_completion ]; then
-                . /usr/share/bash-completion/bash_completion
-        elif [ -f /etc/bash_completion ]; then
-                . /etc/bash_completion
-        fi
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
 fi
 
 PROMPT_AT=@
 
 detect_venv() {
-        pv=""
-        # Detect python venv
-        if [[ -n "${CONDA_DEFAULT_ENV}" ]]; then
-                pv=" ($PYTHON_VENV_CHAR${CONDA_DEFAULT_ENV})"
-        elif [[ -n "${VIRTUAL_ENV}" ]]; then
-                pv=" ($PYTHON_VENV_CHAR$(basename "${VIRTUAL_ENV}"))"
-        fi
+	pv=""
+	# Detect python venv
+	if [[ -n "${CONDA_DEFAULT_ENV}" ]]; then
+		pv=" ($PYTHON_VENV_CHAR${CONDA_DEFAULT_ENV})"
+	elif [[ -n "${VIRTUAL_ENV}" ]]; then
+		pv=" ($PYTHON_VENV_CHAR$(basename "${VIRTUAL_ENV}"))"
+	fi
 }
 
 __ps1() {
-        local P='$' dir="${PWD##*/}" B countme short long double \
-                r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[34m\]' \
-                u='\[\e[33m\]' p='\[\e[32m\]' w='\[\e[35m\]' \
-                b='\[\e[36m\]' x='\[\e[0m\]' e='\[\e[37m\]'
+	local P='$' dir="${PWD##*/}" B countme short long double \
+		r='\[\e[31m\]' g='\[\e[30m\]' h='\[\e[34m\]' \
+		u='\[\e[33m\]' p='\[\e[32m\]' w='\[\e[35m\]' \
+		b='\[\e[36m\]' x='\[\e[0m\]' e='\[\e[37m\]'
 
-        [[ $EUID == 0 ]] && P='#' && u=$r && p=$u # root
-        [[ $PWD = / ]] && dir=/
-        [[ $PWD = "$HOME" ]] && dir='~'
+	[[ $EUID == 0 ]] && P='#' && u=$r && p=$u # root
+	[[ $PWD = / ]] && dir=/
+	[[ $PWD = "$HOME" ]] && dir='~'
 
-        B=$(git branch --show-current 2>/dev/null)
-        [[ $dir = "$B" ]] && B=.
-        countme="$USER$PROMPT_AT$(hostname):$dir($B)\$ "
+	B=$(git branch --show-current 2>/dev/null)
+	[[ $dir = "$B" ]] && B=.
+	countme="$USER$PROMPT_AT$(hostname):$dir($B)\$ "
 
-        [[ $B == master || $B == main ]] && b="$r"
-        [[ -n "$B" ]] && B=" $b($B)"
+	[[ $B == master || $B == main ]] && b="$r"
+	[[ -n "$B" ]] && B=" $b($B)"
 
-        detect_venv # Check if we are in a python virtual env
+	detect_venv # Check if we are in a python virtual env
 
-        # Text on next line (long)
-        PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv\n$p$P$x "
+	# Text on next line (long)
+	PS1="$u\u$e$PROMPT_AT$h\h$e:$w$\w$B$e$pv\n$p$P$x "
 }
 
 PROMPT_COMMAND="__ps1"
@@ -113,7 +113,7 @@ alias df='df -h'
 alias diff="diff --color"
 alias gitl="git log -n 5 --graph --oneline"
 alias sr="source venv/bin/activate"
-alias sh="history | grep "
+alias sht="history | grep "
 alias "rr"='sudo $(fc -ln -1)' #rerun last command as sudo
 
 export KUBECONFIG=~/.kube/config
